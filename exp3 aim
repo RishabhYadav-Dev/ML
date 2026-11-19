@@ -1,0 +1,48 @@
+Experiment No. 3[span_0](start_span)[span_0](end_span)
+
+Aim: To implement CART (Classification and Regression Tree)
+
+Lab Outcome: To determine learning with classificatio 
+
+Theory:
+Nowadays Decision Tree algorithm is known by its modern name CART which stands for Classification and Regression Tree. Classification and Regression Tree or CART is a term introduced by Leo Breiman to refer to Decision Tree algorithm that can be used for classification and regression modeling problems.
+The CART algorithm provides a formation for other important algorithms like bagged decision tree, random forest and boosted decision tree. In the kernel I will solve a classification problem so I will refer to the algorithm as a Decision Tree classification problem.
+
+Steps of CART
+1. Evaluate Best Split for Each Feature
+   - Compute impurity or error
+   - Check all features and their possible split values
+   - Identify the split that gives the maximum reduction of error
+
+2. Select the Optimal Split
+   - Compare impurity decrease for all features
+   - Choose the impurity feature and threshold pair with the best score
+   - This becomes the splitting value for the current node
+
+3. Create Binary Node Child
+   - Split the dataset into Left Node  and Right Node 
+   - Assign corresponding sample to each child node
+
+4. Apply Recursive Splitting
+   - Repeat the same process for each child node
+   - Continue until a stopping condition is met
+
+Diagram Structure (Decision Tree Hierarchy):
+                  [Root Node]
+                 /           \
+       [Internal Node]   [Internal Node]
+        /           \            \
+[Internal Node]  [Leaf Node]  [Leaf Node]
+  /         \
+[Leaf Node] [Leaf Node]
+
+Splitting Criteria for Classification:
+Gini = 1 - ∑(i=1 to n) pi²
+
+Where:
+- pi = proportion of class
+- n = number of classes
+- Gini = 0: node is pure
+- Gini close to 1: node has high impurity
+
+Conclusion: Hence we have implemented a CART.
